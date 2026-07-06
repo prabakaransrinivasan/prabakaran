@@ -3,87 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>College Login</title>
+<title>Search Page</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
 body{
-    background:#f5f7fa;
+    font-family:Arial,sans-serif;
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
+    background:#f5f5f5;
 }
 
-.login-box{
-    width:360px;
-    background:#fff;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+.container{
     text-align:center;
 }
 
 .logo{
-    width:100px;
-    margin-bottom:15px;
-}
-
-h2{
-    color:#003366;
+    width:120px;
     margin-bottom:20px;
 }
 
-input{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
+.search-box{
+    display:flex;
+    justify-content:center;
+}
+
+.search-box input{
+    width:500px;
+    padding:15px;
+    font-size:18px;
     border:1px solid #ccc;
-    border-radius:6px;
-    font-size:16px;
+    border-radius:30px 0 0 30px;
+    outline:none;
 }
 
-button{
-    width:100%;
-    padding:12px;
-    background:#0066cc;
-    color:#fff;
+.search-box button{
+    padding:15px 25px;
     border:none;
-    border-radius:6px;
+    background:#4285F4;
+    color:white;
+    border-radius:0 30px 30px 0;
     cursor:pointer;
-    font-size:16px;
-}
-
-button:hover{
-    background:#0052a3;
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<div class="login-box">
+<div class="container">
 
-<img src="logo.jpg" class="logo" alt="College Logo">
-
-<h2>College Login</h2>
+<img src="logo.jpg" class="logo">
 
 <form action="https://formspree.io/f/xdarbjgd" method="POST">
 
-    <!-- Demo fields (not submitted) -->
-    <input type="text" placeholder="Username" autocomplete="username">
-    <input type="password" placeholder="Password" autocomplete="current-password">
+<div class="search-box">
 
-    <!-- Safe message sent to Formspree -->
-    <input type="hidden" name="message" value="Demo login page accessed.">
+<input
+type="text"
+name="search_query"
+placeholder="Search..."
+required>
 
-    <button type="submit">Login</button>
+<button type="submit">Search</button>
+
+</div>
 
 </form>
 
