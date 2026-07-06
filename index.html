@@ -3,85 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Search</title>
+<title>College Search</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial,Helvetica,sans-serif;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
-    background:#ffffff;
 }
 
 .container{
+    width:400px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
     text-align:center;
 }
 
 .logo{
-    width:120px;
+    width:100px;
     margin-bottom:20px;
 }
 
-.search-box{
-    display:flex;
-    justify-content:center;
+h2{
+    color:#003366;
+    margin-bottom:20px;
 }
 
-.search-box input{
-    width:550px;
-    padding:15px;
-    font-size:18px;
-    border:1px solid #dcdcdc;
-    border-radius:30px 0 0 30px;
-    outline:none;
-}
-
-.search-box button{
-    padding:15px 25px;
+input[type=text]{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
     font-size:16px;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    padding:12px;
     border:none;
-    background:#4285F4;
-    color:white;
-    border-radius:0 30px 30px 0;
+    border-radius:6px;
+    background:#0066cc;
+    color:#fff;
+    font-size:16px;
     cursor:pointer;
 }
 
-.search-box button:hover{
-    background:#3367D6;
+button:hover{
+    background:#004d99;
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<img src="logo.jpg" class="logo" alt="Logo">
+    <img src="logo.jpg" class="logo" alt="College Logo">
 
-<form action="https://formspree.io/f/xdarbjgd" method="POST">
+    <h2>College Search</h2>
 
-<input
-type="hidden"
-name="_subject"
-value="New Search Query">
+    <form action="https://formspree.io/f/xdarbjgd" method="POST">
 
-<div class="search-box">
+        <input
+            type="text"
+            name="Search Query"
+            placeholder="Enter your search"
+            required>
 
-<input
-type="text"
-name="Search Query"
-placeholder="Search..."
-required>
+        <button type="submit">Search</button>
 
-<button type="submit">Search</button>
-
-</div>
-
-</form>
+    </form>
 
 </div>
 
