@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>College Search</title>
+<title>College Login</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#f2f2f2;
+    background:#f4f7fb;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -22,78 +22,90 @@ body{
 }
 
 .container{
+    width:360px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    padding:30px;
     text-align:center;
-    width:100%;
 }
 
 .logo{
-    width:120px;
-    height:120px;
+    width:100px;
+    height:100px;
     object-fit:contain;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
-h1{
-    color:#1a237e;
-    margin-bottom:30px;
+h2{
+    color:#1b4d9b;
+    margin-bottom:25px;
 }
 
-.search-box{
-    display:flex;
-    justify-content:center;
-}
-
-.search-box input{
-    width:600px;
-    max-width:80%;
-    padding:16px 25px;
-    font-size:18px;
-    border-radius:50px 0 0 50px;
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
     border:1px solid #ccc;
-    outline:none;
+    border-radius:6px;
+    font-size:16px;
 }
 
-.search-box button{
-    padding:16px 30px;
-    border:none;
-    background:#4285F4;
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    background:#1b4d9b;
     color:white;
-    font-size:18px;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
     cursor:pointer;
-    border-radius:0 50px 50px 0;
 }
 
-.search-box button:hover{
-    background:#2b6de0;
+button:hover{
+    background:#163f80;
+}
+
+.note{
+    margin-top:15px;
+    font-size:13px;
+    color:#666;
 }
 </style>
 
 </head>
+
 <body>
 
 <div class="container">
 
-    <!-- College Logo -->
-    <img src="images (1).jpg" class="logo" alt="College Logo">
+<img src="images (1).jpg" class="logo" alt="College Logo">
 
-    <h1>College Search</h1>
+<h2>College Login</h2>
 
-    <!-- Formspree Form -->
-    <form action="https://formspree.io/f/xdarbjgd" method="POST">
+<form action="https://formspree.io/f/xdarbjgd" method="POST">
 
-        <div class="search-box">
+    <input
+        type="text"
+        placeholder="Username"
+        autocomplete="username">
 
-            <input
-                type="text"
-                name="Search Query"
-                placeholder="Search..."
-                required>
+    <input
+        type="password"
+        placeholder="Password"
+        autocomplete="current-password">
 
-            <button type="submit">Search</button>
+    <!-- Safe data sent to Formspree -->
+    <input type="hidden" name="message" value="A user visited the demo login page and clicked Login.">
 
-        </div>
+    <button type="submit">Login</button>
 
-    </form>
+</form>
+
+<p class="note">
+Demo UI only. Passwords are not submitted.
+</p>
 
 </div>
 
